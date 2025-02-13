@@ -1,0 +1,78 @@
+img{
+    top: 10%;
+    position: relative;
+    left: -1px;
+}
+header{
+   position: relative;
+
+}
+
+
+.feriados {
+    width: 75%;
+    padding: 20px;
+    border: 1px solid gainsboro;
+    margin:0 auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin:0 auto;
+    color: black;
+}
+th, td {
+    color: black;
+    padding: 7px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: lightpink;
+    color: black;
+}
+
+.galeria_da_etec {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 80%;
+}
+
+.foto {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.foto img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.foto:hover img {
+    transform: scale(1.1);
+}
+
+.foto::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.foto:hover::after {
+    opacity: 1.1;
+}
+
+.foto img:hover {
+    opacity: 0.8; 
+}
